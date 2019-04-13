@@ -1,0 +1,31 @@
+1)Icons
+http://ionicframework.com/docs/v2/ionicons/
+
+2)New Beta version
+-npm install -g ionic@beta - this will upgrade your local ionic version
+-replace contents of package.json with the latest one
+-go to projects root directory and run "npm install" -this will upgrade your current project to latest version
+
+3)Default browser configuration would be in ionic.config.json
+
+4)Upgrading to latest beta version link
+https://github.com/driftyco/ionic/blob/2.0/CHANGELOG.md 
+
+5)Angular and bootstrapo integration
+https://scotch.io/tutorials/how-to-correctly-use-bootstrapjs-and-angularjs-together
+
+npm install angular-ui-bootstrap
+
+6)Angular2 and ng2-bootstrap integration
+http://valor-software.com/ng2-bootstrap/#/
+
+npm install --save ng2-bootstrap
+
+Code points
+1)If search box contains undefined instaed of search ->searchQuery: string=""; at class level where searchQuery is search box's name.
+
+Scopes in angular
+https://github.com/angular/angular.js/wiki/Understanding-Scopes
+
+Gulp task
+http://npm.taobao.org/package/ionic-gulp-compass

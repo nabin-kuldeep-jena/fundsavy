@@ -1,0 +1,17 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+//@import '../nsgroup/fundsavy/home/home';
+
+//NS Framework related import
+@import "../nsgroup/fundsavy/accounts/views/allaccounts";
+@import "../nsgroup/fundsavy/accounts/views/accountssearch";
+@import '../icons/ionicons';
+@import '../nsgroup/framework/module/menu/views/nssidemenu';
+@import '../nsgroup/framework/module/chart/views/ns-area-chart';

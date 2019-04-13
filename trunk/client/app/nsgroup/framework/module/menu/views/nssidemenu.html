@@ -1,0 +1,52 @@
+<ion-menu id="nssidemenu" [content]="content" >
+   <!-- <ion-toolbar>
+        <ion-title>{{sideMenuConfigModel.menuTitle}}</ion-title>
+    </ion-toolbar>-->
+
+    <ion-content class="nsmenu-content">
+        <div class="nsmenu-title-header">
+
+            <div class="ns-menu-profile-icon">
+                <img src="/build/nsgroup/framework/resources/icon/male-human.png" >
+                <ion-label class="account-details">Nabin Kuldeep Jena</ion-label>
+                <ion-label class="account-details">8123987221</ion-label>
+            </div>
+        </div>
+        <ion-list>
+           </ion-list>
+          <accordion *ngIf="sideMenuConfigModel!=null" >
+               <accordion-group #group [isOpen]="false" *ngFor="let menuItem of sideMenuConfigModel.menuItems" >
+                <div accordion-heading>
+                    {{menuItem.name}}
+                    <i  *ngIf="menuItem.subMenuItems!=null" class="pull-right glyphicon"
+                       [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+                </div>
+                <ion-list  *ngIf="menuItem.subMenuItems!=null">
+                     <button ion-item menuClose *ngFor="let subMenuItem of menuItem.subMenuItems" (click)="onClickSubMenuItem(subMenuItem)">
+                        <ion-icon item-left [name]="subMenuItem.icon"></ion-icon>
+                        {{subMenuItem.name}}
+                    </button>
+                </ion-list>
+            </accordion-group>
+        </accordion>
+    </ion-content>
+
+    <ion-footer>
+        <ion-toolbar class="ns-menu-toolbar">
+            <ion-buttons left>
+                <button royal class="ns-menu-toolbar-buttons">
+                    <ion-icon name="settings" class="ns-menu-toolbar-buttons-icon" >
+                        Settings
+                    </ion-icon>
+                </button>
+                <button royal class="ns-menu-toolbar-buttons">
+                    <ion-icon  class="ns-menu-toolbar-buttons-icon">
+                        Settings
+                    </ion-icon>
+                </button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>
+</ion-menu>
+<!-- main navigation -->
+<ion-nav [root]="root" #content swipe-back-enabled="true"></ion-nav>

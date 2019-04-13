@@ -1,0 +1,32 @@
+<ion-navbar>
+  <ion-title>Let's divide</ion-title>
+</ion-navbar>
+<ion-content>
+    <ion-item>
+        <ion-label fixed>Paid by</ion-label>
+        <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>Paid for</ion-label>
+        <ion-input type="text" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>Amount</ion-label>
+        <ion-input type="text" clearInput></ion-input>
+    </ion-item>
+    <!--<ion-label fixed>Share per head</ion-label>-->
+    <ion-item>
+        <ion-label fixed>Share between</ion-label>
+        <ion-input type="text" [(ngModel)]="contacttobefound" (input)="findfn(contacttobefound)"></ion-input>
+        <ion-list>
+        <ion-item *ngFor="#item of contactsfound">
+           {{item.displayName}}
+        </ion-item>
+        </ion-list>
+    </ion-item>
+    
+   <!--<ion-label>Paid by</ion-label>
+   <ion-label>Paid for</ion-label>
+   <ion-label>Expense</ion-label>
+   <ion-label>Split between</ion-label>-->
+</ion-content>

@@ -1,0 +1,88 @@
+  <ion-header-bar >
+  <ion-toolbar toolbar-bgColor> 
+  <ion-buttons left>
+   <button menuToggle side="left">
+    <ion-icon name="menu"></ion-icon>
+   </button> 
+  </ion-buttons>
+  <ion-buttons end>
+  <button (click)="practiceFile()">
+     <ion-icon name="add"></ion-icon>
+   </button>
+   <button (click)="openSearchScreen()">
+     <ion-icon name="search"></ion-icon>
+   </button>
+   <button>
+     <ion-icon name="notifications"></ion-icon>
+   </button>
+   <button (click)="presentPopover($event)">
+     <ion-icon name="more"></ion-icon>
+   </button>
+  </ion-buttons>
+  
+  <!--START-->
+    <nav>
+      <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+      <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+  
+  <a href="#" class="menu-item"></a>
+  <a href="#" class="menu-item"></a>
+  <a href="#" class="menu-item"></a>
+    </nav>
+  <!--END-->
+ </ion-toolbar>
+  </ion-header-bar>
+ <ion-content>
+ <ion-textarea rows="20" cols="10"></ion-textarea>
+ 
+ <ion-segment [(ngModel)]="type" (ionChange)="onSegmentChanged($event)">
+  <ion-segment-button value="Debits">
+     Debits
+  </ion-segment-button>
+  <ion-segment-button value="Credits">
+     Credits
+  </ion-segment-button>
+ </ion-segment>
+ <div [ngSwitch]="type">
+   <ion-list *ngSwitchCase="'Debits'">
+   <ion-item *ngFor="let account of accounts">
+      <ion-avatar item-left>
+          <img [src]="account.image">
+      </ion-avatar>
+      
+        <div class="div-inlign">{{account.accName}}</div>
+        <div class="div-inlign-float-right">{{account.accCurBal}}</div>
+        <br/>
+        <div align="left" > {{account.accNo}}</div>
+      <!--<span>{{account.accName}}</span>
+      <span>{{account.accCurBal}}</span>
+      -->
+    </ion-item>
+  </ion-list>
+   <ion-list *ngSwitchCase="'Credits'">
+   
+  </ion-list>
+   <!--<ion-list *ngSwitchWhen="'Debits''">
+      <ion-item>
+        <h2>Ruby</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchWhen="'Credits''">
+      <ion-item>
+        <h2>Python</h2>
+      </ion-item>
+    </ion-list>-->
+    <!--<p *ngSwitchCase="'Debits'">increment to start</p>
+    <p *ngSwitchCase="'Credits'">increment to start</p>-->
+ </div>
+   
+  <!--<ion-card >
+    <img src="build/nsgroup/fundsavy/resources/images/test/acc_bc_img.png" height="200"/>
+    <div class="card-title">São Paulo</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>-->
+</ion-content>

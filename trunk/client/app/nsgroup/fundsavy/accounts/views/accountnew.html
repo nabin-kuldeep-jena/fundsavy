@@ -1,0 +1,30 @@
+<ion-header-bar >
+<ion-navbar toolbar-bgColor>
+  <ion-title>New Account</ion-title>
+</ion-navbar>
+ <ion-header-bar >
+<ion-content>
+<br>
+<ion-item>
+  <ion-label fixed>Bank Name</ion-label>
+  <ion-input type="text"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label fixed>A/C No.</ion-label>
+  <ion-input type="text"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label>Type</ion-label>
+<ion-select [(ngModel)]="accType">
+    <ion-option value="c" checked="true">Current</ion-option>
+    <ion-option value="s">Savings</ion-option>
+  </ion-select>
+</ion-item>
+<ion-item>
+  <ion-label fixed>Current Balance</ion-label>
+  <ion-input type="text"></ion-input>
+</ion-item>
+<button (click)="presentToast()">
+     <ion-icon name="add"></ion-icon>
+   </button>
+</ion-content>

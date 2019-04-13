@@ -1,0 +1,27 @@
+.nsmenu-content{
+
+}
+.nsmenu-title-header {
+
+  background-color: rgba(44, 153, 209, 0.61);
+  width: 340px;
+  height: 150px;
+}
+.account-details {
+ font-style: oblique;
+}
+.ns-menu-toolbar {
+  height: 10%;
+  background: url('../nsgroup/framework/resources/images/menu-title-bg.jpg');
+}
+.ns-menu-profile-icon {
+  position: center;
+  width: 90px;
+  height: 90px;
+}
+.ns-menu-toolbar-buttons-icon {
+  content: url('../nsgroup/framework/resources/icon/gear.png') !important;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}

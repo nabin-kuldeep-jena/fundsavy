@@ -1,0 +1,24 @@
+<ion-header-bar >
+<ion-navbar toolbar-bgColor>
+  <ion-title>New Category</ion-title>
+</ion-navbar>
+ <ion-header-bar>
+<ion-content>
+<br>
+<ion-item>
+  <ion-label fixed>Name</ion-label>
+  <ion-input type="text" [(ngModel)]="catName"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label fixed>Image Path</ion-label>
+  <ion-input type="text" [(ngModel)]="catPath"></ion-input>
+</ion-item>
+    <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-select [(ngModel)]="catType">
+            <ion-option value="c" checked="true">Credit</ion-option>
+            <ion-option value="d">Debit</ion-option>
+        </ion-select>
+</ion-item>
+<button (click)="saveCategoryDetails()">Save</button>
+</ion-content>

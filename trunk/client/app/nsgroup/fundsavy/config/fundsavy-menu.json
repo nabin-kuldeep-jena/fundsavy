@@ -1,0 +1,15 @@
+{
+  "menuTitle":"Menu",
+  "isMultipleAlow":"true",
+  "menuItems":[
+    { "name": "Account", "componentName": "AllAccountsController", "icon": "ion-ios-gear-outline",
+      "subMenuItems":[
+        {"name": "All Accounts", "componentName": "AllAccountsController", "icon": "calendar","swipeIcon":"calander"}
+    ],
+      "rightIcon":"calander"
+    },
+    { "name": "Report", "componentName": "ReportSearchController", "icon": "calendar"},
+    { "name": "About", "componentName": "AboutController", "icon": "ion-ribbon-b"},
+    { "name": "Help", "componentName": "HelpController", "icon": "ion-help-circled"}
+  ]
+}

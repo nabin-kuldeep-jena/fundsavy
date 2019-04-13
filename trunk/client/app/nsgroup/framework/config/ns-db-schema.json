@@ -1,0 +1,22 @@
+{
+  "applicationName": "ns-framework",
+  "version": "0.0.1",
+  "databaseType":"SQLITE",
+  "dbName":"ns_framework_db",
+  "clearSchemas": [
+    "DROP TABLE IF EXISTS install_version",
+    "DROP TABLE IF EXISTS accounts2"
+  ],
+  "newSchemas":[
+    "CREATE TABLE IF NOT EXISTS install_version (id INTEGER PRIMARY KEY AUTOINCREMENT,version_no NUMERIC,install_date TEXT)",
+    "CREATE TABLE IF NOT EXISTS accounts2 (id INTEGER PRIMARY KEY AUTOINCREMENT,acc_number TEXT,acc_name TEXT,acc_type TEXT,acc_status TEXT,acc_details TEXT)"
+  ],
+  "clearRefDataQuery":[
+    "TRUNCATE TABLE accounts2"
+  ],
+  "refDataQuery":[
+  ],
+  "testSqlQuery":[
+
+  ]
+}

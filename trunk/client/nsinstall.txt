@@ -1,0 +1,4 @@
+cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
+cordova plugin add https://github.com/brodysoft/Cordova-SQLitePlugin.git
+//ionic plugin add cordova-sqlite-storage
+npm install --save ng2-bootstrap

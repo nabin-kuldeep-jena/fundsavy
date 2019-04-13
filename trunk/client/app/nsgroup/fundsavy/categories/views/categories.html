@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar toolbar-bgColor>
+        <ion-title>Categories</ion-title>
+        <button menuToggle  side="left">
+            <ion-icon name="menu" isActive="false"></ion-icon>
+        </button>
+        <button (click)="onCategoryAdd()" side="right">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+<ion-content class="categories">
+    <ion-item *ngFor="let category of categories">
+        <ion-avatar item-left>
+            <img [src]="category.iconName">
+        </ion-avatar>
+        <div class="div-inlign">{{category.catName}}</div>
+    </ion-item>
+</ion-content>
+<ns-side-menu>
+</ns-side-menu>

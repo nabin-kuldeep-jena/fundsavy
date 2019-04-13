@@ -1,0 +1,33 @@
+Ionic2:-
+http://www.gajotres.net/ionic-2-a-page-anatomy-part-1-the-root-component/
+http://mcgivery.com/15-ionic-framework-2-resources/
+http://www.bogotobogo.com/AngularJS/AngularJS_HttpRequest_json.php
+http://www.jujens.eu/posts/en/2016/Mar/15/ionic2-aurelia-f7/#aurelia-and-framework7
+http://www.beyondjava.net/blog/category/angularjs-2/
+https://codegeekz.com/20-best-angularjs-tools-developers/
+
+Angular2:-
+http://blog.thoughtram.io/angular/2015/06/29/shadow-dom-strategies-in-angular2.html
+http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2
+http://victorsavkin.com/post/123555572351/writing-angular-2-in-typescript
+http://learnangular2.com/lifecycle/
+http://www.joshmorony.com/a-guide-to-styling-an-ionic-2-application/
+
+typescript:-
+https://johnpapa.net/typescriptpost2/
+
+ALL 3
+http://www.angulartypescript.com/angular-2-pipes/
+
+Internationalization:-
+http://www.gajotres.net/ionic-2-internationalize-and-localize-your-app-with-angular-2/
+
+gulp:
+http://ilikekillnerds.com/2014/07/how-to-basic-tasks-in-gulp-js/
+
+Icons:
+https://google.github.io/material-design-icons/
+https://codepen.io/ryanmorr/pen/RPZZjd
+
+Web development books
+http://ebook-dl.com/computer/web-development-design/page/2

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>About</ion-title>
+        <button menuToggle>
+            <ion-icon name="menu" isActive="false"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+<ion-content class="entrypoint">
+
+
+    <ion-list inset>
+        <ion-item>
+            <ion-label>Username</ion-label>
+            <ion-input [(ngModel)]="username" type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button block (click)="getRepos()">Search</button>
+    </div>
+    <ion-card *ngFor="let repo of foundRepos">
+       <ion-card-content>
+            {{ repo.description }}
+        </ion-card-content>
+         <ion-card-header>
+            {{ repo.name }}
+        </ion-card-header>
+    </ion-card>
+</ion-content>
+<ns-side-menu>
+</ns-side-menu>

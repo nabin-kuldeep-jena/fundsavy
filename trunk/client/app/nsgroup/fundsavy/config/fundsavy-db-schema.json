@@ -1,0 +1,49 @@
+{
+  "applicationName": "fundsavy",
+  "version": "0.0.1",
+  "databaseType":"SQLITE",
+  "dbName":"ns_fundsavy_db",
+  "clearSchemas": [
+    "DROP TABLE IF EXISTS account_tbl",
+    "DROP TABLE IF EXISTS account_balance",
+    "DROP TABLE IF EXISTS image_tbl",
+    "DROP TABLE IF EXISTS category_tbl"
+  ],
+  "newSchemas":[
+    "CREATE TABLE IF NOT EXISTS account_tbl (acc_id INTEGER PRIMARY KEY AUTOINCREMENT,acc_number number,acc_name TEXT,acc_type TEXT,acc_status TEXT,acc_details TEXT,img_path TEXT)",
+    "CREATE TABLE IF NOT EXISTS account_balance (acb_id INTEGER PRIMARY KEY AUTOINCREMENT,acc_id number,acc_balance number)",
+    "CREATE TABLE IF NOT EXISTS image_tbl (img_id INTEGER PRIMARY KEY AUTOINCREMENT,img_name TEXT,img_path TEXT)",
+    "CREATE TABLE IF NOT EXISTS category_tbl (cat_id INTEGER PRIMARY KEY AUTOINCREMENT,cat_name TEXT,cat_type TEXT,img_id NUMBER)"
+  ],
+  "clearRefDataQuery":[
+
+    "INSERT INTO image_tbl values(1,'airplane.png','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(2,'bag.png','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(3,'cash-machine.png','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(4,'gift.png','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(5,'telephone.png','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(6,'money.png','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(7,'monitor.png','build/nsgroup/fundsavy/resources/images/test/')",
+
+    "INSERT INTO category_tbl values(1,'flight','Debit',1)",
+    "INSERT INTO category_tbl values(2,'shopping','Debit',2)",
+    "INSERT INTO category_tbl values(3,'Atm','Debit',3)",
+    "INSERT INTO category_tbl values(4,'Phone Bill','Debit',4)"
+  ],
+  "refDataQuery":[
+  ],
+  "testSqlQuery":[
+    "INSERT INTO account_tbl values(1,498234837,'Axis Credit Card','Credit','Active','NS Group ,Marathahalii,Bangalore','build/nsgroup/fundsavy/resources/images/test/axisbank.png')",
+    "INSERT INTO account_tbl values(2,432483444,'Sbi Bank debit Card','Saving','Active','NS Group ,Marathahalii,Bangalore','build/nsgroup/fundsavy/resources/images/test/sbi.jpg')",
+    "INSERT INTO account_tbl values(3,324324324,'HDFC Cash Card','Credit','Active','NS Group ,Marathahalii,Bangalore','build/nsgroup/fundsavy/resources/images/test/icici_bank.jpg')",
+    "INSERT INTO account_tbl values(4,432484383,'SC Save Money','Saving','Active','NS Group ,Marathahalii,Bangalore','build/nsgroup/fundsavy/resources/images/test/icici_bank.jpg')",
+    "INSERT INTO account_balance values(1,1,10000)",
+    "INSERT INTO account_balance values(2,1,4000)",
+    "INSERT INTO account_balance values(3,1,15000)",
+    "INSERT INTO account_balance values(4,1,56400)",
+    "INSERT INTO image_tbl values(11,'axisbank.png','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(12,'sbi.jpg','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(13,'icici_bank.jpg','build/nsgroup/fundsavy/resources/images/test/')",
+    "INSERT INTO image_tbl values(14,'icici_bank.jpg','build/nsgroup/fundsavy/resources/images/test/')"
+  ]
+}
